@@ -11,3 +11,4 @@ namespace JWTAuthentication.Authentication
         public string? Password { get; set; }
     }
 }
+

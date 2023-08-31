@@ -22,7 +22,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("name = ConnectionStrings:Data Source=ecopowerlogistics323.database.windows.net;Initial Catalog=Project_2;User ID=gcinathandog;Password=************"));
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("name=ConnectionStrings:ConnStr"));
 
 // For Identity  
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -49,6 +49,7 @@ builder.Services.AddAuthentication(options =>
                     ValidIssuer = builder.Configuration["Jwt:ValidIssuer"],
                     ValidAudience = builder.Configuration["Jwt:ValidAudience"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]))
+
                 };
             });
 
@@ -120,4 +121,5 @@ IWebHostEnvironment environment = app.Environment;
 app.MapControllers();
 
 app.Run();
+
 

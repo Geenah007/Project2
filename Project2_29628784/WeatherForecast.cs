@@ -1,13 +1,21 @@
-namespace Project2_29628784
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
+namespace WebAppSecureClass.Controllers
+
 {
-    public class WeatherForecast
+
+    [Authorize]
+    [ApiController]
+    [Route("[controller]")]
+    public class WeatherForecastController : ControllerBase
     {
-        public DateTime Date { get; set; }
+        private static readonly string[] Summaries = new[]
+        {
+        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+    };
 
-        public int TemperatureC { get; set; }
+        private readonly ILogger<WeatherForecastController> _logger;
 
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-
-        public string? Summary { get; set; }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace JWTAuthentication.Authentication
+﻿namespace JWTAuthentication.Authentication
 {
     public class Response
     {

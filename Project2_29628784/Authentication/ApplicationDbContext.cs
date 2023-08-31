@@ -14,6 +14,6 @@ namespace JWTAuthentication.Authentication
         {
             base.OnModelCreating(builder);
         }
-
     }
 }
+
