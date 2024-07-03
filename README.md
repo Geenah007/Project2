@@ -1,4 +1,4 @@
-# CMPG323_Project2_29628784
+# Project2_API's and Cloud Computing
 
 This project will focus on API's and Cloud Computing.
 
